@@ -1,3 +1,69 @@
+-- Crie um banco com o nome de SpotifyClone.
+-- Providencie as queries necessárias para criar tabelas normalizadas que atendam aos requisitos descritos na seção anterior;
+-- Providencie as queries necessárias para popular as tabelas de acordo com os dados listados na seção anterior;
+-- Crie um arquivo de configurações desafio1.json, que mapeará em qual tabela e coluna se encontram as informações necessárias para a avaliação automatizada deste desafio. As configurações devem possuir o seguinte formato:
+
+-- {
+--   "coluna_usuario": "nome-da-coluna",
+--   "tabela_que_contem_usuario": "nome-da-tabela-que-armazena-a-coluna",
+--   "coluna_plano": "nome-da-coluna",
+--   "tabela_que_contem_plano": "nome-da-tabela-que-armazena-a-coluna",
+--   "coluna_historico_de_reproducoes": "nome-da-coluna",
+--   "tabela_que_contem_historico_de_reproducoes": "nome-da-tabela-que-armazena-a-coluna",
+--   "coluna_seguindo_artistas": "nome-da-coluna",
+--   "tabela_que_contem_seguindo_artistas": "nome-da-tabela-que-armazena-a-coluna",
+--   "coluna_artista": "nome-da-coluna",
+--   "tabela_que_contem_artista": "nome-da-tabela-que-armazena-a-coluna",
+--   "coluna_album": "nome-da-coluna",
+--   "tabela_que_contem_album": "nome-da-tabela-que-armazena-a-coluna",
+--   "coluna_cancoes": "nome-da-coluna",
+--   "tabela_que_contem_cancoes": "nome-da-tabela-que-armazena-a-coluna"
+-- }
+-- Essa configuração deve ser feita baseada no seu banco de dados após a normalização. Ou seja, se você criou uma tabela chamada users que possui a coluna name, você substituiria "coluna_usuario" e "tabela_que_contem_usuario" da seguinte forma:
+
+-- {
+--   "coluna_usuario": "name",
+--   "tabela_que_contem_usuario": "users",
+--   ...
+-- }
+-- Salve as queries criadas no arquivo desafio1.sql. Seu código deverá ser similar ao seguinte:
+-- DROP DATABASE IF EXISTS SpotifyClone;
+
+-- CREATE DATABASE SpotifyClone;
+
+-- USE SpotifyClone;
+
+-- CREATE TABLE tabela1(
+--     coluna1 tipo restricoes,
+--     coluna2 tipo restricoes,
+--     colunaN tipo restricoes,
+-- ) engine = InnoDB;
+
+-- CREATE TABLE tabela2(
+--     coluna1 tipo restricoes,
+--     coluna2 tipo restricoes,
+--     colunaN tipo restricoes,
+-- ) engine = InnoDB;
+-- INSERT INTO tabela1 (coluna1, coluna2)
+-- VALUES
+--   ('exemplo de dados 1', 'exemplo de dados A'),
+--   ('exemplo de dados 2', 'exemplo de dados B'),
+--   ('exemplo de dados 3', 'exemplo de dados C');
+-- INSERT INTO tabela2 (coluna1, coluna2)
+-- VALUES
+--   ('exemplo de dados 1', 'exemplo de dados X'),
+--   ('exemplo de dados 2', 'exemplo de dados Y');
+-- O que será verificado:
+-- Será validado se os planos estão na tabela normalizada.
+-- Será validado se o histórico de reprodução está na tabela normalizada.
+-- Será validado se as informações sobre pessoas seguindo artistas estão na tabela normalizada.
+-- Será validado se os álbuns estão na tabela normalizada.
+-- Será validado se os canções estão na tabela normalizada.
+-- Será validado se as informações sobre pessoas usuárias estão na tabela normalizada.
+-- Será validado se as informações sobre pessoas artistas estão na tabela normalizada.
+-- ⚠️ Note que uma vez executado um teste, a sua base de dados SpotifyClone será dropada. Logo, se atente a salvar seu progresso nos arquivos de desafio! ⚠️
+
+
 DROP DATABASE IF EXISTS SpotifyClone;
 CREATE DATABASE SpotifyClone;
 USE SpotifyClone;
